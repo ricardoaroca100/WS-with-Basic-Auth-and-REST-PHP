@@ -40,9 +40,9 @@ echo 'Sending: ' . $content . '';
 $options = array('http' =>
     array(
         'method'  => 'POST',
-        'header'  => "Content-type: application/json"
-                   . "Accept: application/json"
-                   . "Authorization: Basic " . base64_encode("$username:$password"),
+        'header'  => "Content-type: application/json\r\n"
+                   . "Accept: application/json\r\n"
+                   . "Authorization: Basic " . base64_encode("$username:$password") . "\r\n",
         'content' => $content
     )
 );
